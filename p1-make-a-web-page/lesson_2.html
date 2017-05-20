@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- Intro to Programming Nanodegree -->
+<!-- Project 1 - Make a Web Page -->
+<!-- Ricardo Yoshitomi -->
+
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Ricardo's Notes</title>
+    
+    <!-- I used in this project some nice Google Fonts that I found in this page https://fonts.google.com/ -->
+    <!-- There are dozens of fonts and I chose some of them -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
+    <link rel="stylesheet" href="css/style.css" media="all">
+    
+</head>
+<!-- All HTML elements and CSS styles I used in this project I found in http://www.w3schools.com/ , https://developer.mozilla.org/ , https://stackoverflow.com/ pages  -->
+<body>
+    <!-- I saw that many websites use a container class to fit the box properly in the screen -->    
+    <div class="container">
+        <!-- I put a sidebar here, but I don't know how to make the bar stick on the left side while scrolling down the page in CSS. Maybe it is only possible with JavaScript -->  
+        <aside class="sidebar">
+            <header>
+                <h1><a href="about.html">Ricardo&#8217;s <strong><span class="page-name">Notes</span></strong></a></h1>
+                <h6 class="course-name">INTRO TO PROGRAMMING NANODEGREE</h6>
+            </header>
+            <div class="menu">
+                <nav class="menu-lesson">
+                    <h2>Lesson 0 - Getting Started with HTML</h2>
+                    <ul>
+                        <li><a href="lesson_0.html"><strong>A Review of the Basic Concepts of HTML</strong></a></li>
+                    </ul>
+                </nav>
+                <nav class="menu-lesson">
+                    <h2>Lesson 1 - Make a Web Page</h2>
+                    <ul>
+                        <li><a href="lesson_1.html"><strong>The Structure of a Web Page</strong></a></li>
+                        <li><a href="lesson_2.html"><strong>CSS Style and HTML Work Together</strong></a></li>
+                    </ul>
+                </nav>
+                <nav class="menu-lesson">
+                    <h2>Lesson 2 - Code Your Own Quiz</h2>
+                    <ul>
+                        <li><a href="about.html"><strong>Coming Soon</strong></a></li>
+                    </ul>
+                </nav>
+                <nav class="menu-lesson">
+                    <h2>Lesson 3 - Create a Movie Website</h2>
+                    <ul>
+                        <li><a href="about.html"><strong>Coming Soon</strong></a></li>
+                    </ul>
+                </nav>
+                <nav class="menu-lesson">
+                    <h2>Lesson 4 - Discover Your Path</h2>
+                    <ul>
+                        <li><a href="about.html"><strong>Coming Soon</strong></a></li>
+                    </ul>
+                </nav>
+                <nav class="menu-lesson">
+                    <h2>Lesson 5 - Choose Your Path</h2>
+                    <ul>
+                        <li><a href="about.html"><strong>Coming Soon</strong></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+  
+    <main class="main">
+         <div class="container">
+             <section>
+                 
+                 <header>
+                        <h1>CSS Style and HTML Work Together</h1>
+                    </header>
+                    <h3>Adding CSS Style</h3>
+
+                        <p>
+                            The HTML language is responsible for giving the structure and the text content of a page, while <strong>CSS</strong> is the language used to give <strong>style</strong> for each HTML element. CSS stands for <em>Cascading Sheet Style</em>. The word <em>Cascading</em> means that a specific rule applied to an element will be applied to all elements inside it until this rule reaches the deeper element by cascading.
+                        </p>
+
+                    <h3>Applying CSS</h3>
+                 
+                        <p>
+                            The most used method for applying CSS style in a web page is to link the HTML document to an external CSS file. This method makes the work more organized by separating the CSS code from the structural HTML. It also saves a lot of work because a single CSS file can control the layout of multiple web pages all at once.
+                        </p>
+                    
+                        <p>
+                            The CSS expression used to apply style to an element is given follow:
+                        </p>
+                
+                        <figure class="dark-box">
+                                                        
+                            <code>
+                                <strong>selector</strong> {<br>
+                                property 1: declaration 1;<br>
+                                property 2: declaration 2;<br>
+                                ...<br>
+                                }                            
+                            </code>       
+                            
+                        </figure>
+                       
+                        <ul>
+                        <li>selector is the element we want to style</li>
+                        <li>Everything between the curly braces is the rule</li>
+                        <li>declaration is each line of the code between the curly braces</li>
+                        <li>property is the property we want to style</li>
+                        <li>value is the value of the property</li>
+                        </ul>
+                 
+                    <h3>The Box Elements</h3>
+                         <p>
+                             All HTML elements are boxes. It is necessary to understand the components of these boxes to set it properly on the page. Each box has four components:
+                        </p>
+                        
+                        <ol>
+                        <li><strong>Content</strong> is the content of the box and it sits at the very center </li>
+                        <li><strong>Padding</strong> is a layer that clears an area around the content</li>
+                        <li><strong>Border</strong> is around the padding and content</li>
+                        <li><strong>Margin</strong> is the outer layer</li>
+                        </ol>
+   
+             </section>
+
+        </div>
+    </main>
+        
+    </div>
+    
+</body>
+</html>
