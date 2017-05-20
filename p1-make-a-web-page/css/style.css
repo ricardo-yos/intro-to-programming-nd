@@ -1,0 +1,207 @@
+/*! CSS file*/
+/*! Intro to Programming Nanodegree*/
+/*! Project 1 - Make a Web Page*/
+/*! Ricardo Yoshitomi*/
+
+.page-name {
+    font-family:Raleway,sans-serif;
+    font-size:40px;
+}
+
+.course-name {
+    color: #fff;
+    font-size:.6em;
+    font-weight: 500;
+    line-height: 15px;
+    margin:10px auto 0;
+}
+
+body {
+    position:relative;
+    margin:0;
+    padding:0;
+    height:100%;
+    max-height:2000px;
+    font:300 1.15em/1.5em Lato, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    word-wrap: break-word;
+}
+
+body>.container {
+    height:100%;
+    background-color:#fff;
+}
+
+.sidebar {
+    padding:0;
+    width:25%;
+    height:auto;
+    max-height:2000px;
+    max-width:100%;
+    float:left;
+}
+
+.sidebar {
+    position:absolute;
+    top:0;
+    left:0;
+    background:#082767 center center;
+    overflow:hidden;
+}
+
+.sidebar>header {
+    width:80%;
+    margin:60px auto 60px;
+    text-align:center;
+    clear:both;
+}
+
+.sidebar>header h1 {
+    margin:.4em 0;
+    letter-spacing:-1.5px;
+    text-align:center;
+}
+
+.sidebar>header a{
+    color:#fff;
+    font-weight:300;
+    text-decoration:none;
+}
+
+.menu {
+    position:relative;
+    width:85%;
+    margin:0px auto 80px;
+    text-align:center;
+}
+
+.menu-lesson {
+    width:100%;
+    display: block;
+    line-height: 1.5;
+    padding:.9em 1px;
+    box-sizing: border-box;
+    border-top: groove 1px #E1E1E1;
+    text-align: left;
+}
+
+.sidebar>nav {
+    width:85%;
+    margin:30px auto 30px;
+    text-align:left;
+}
+
+.menu>nav ul {
+    font-size:14px;
+    margin-top:0;
+    padding:0;
+    list-style:none;
+}
+
+.menu>nav h2 {
+    font-size:0.9em;
+    font-weight:500;
+    color:#fff;
+    margin-top:12px;
+    margin-bottom:12px;
+}
+
+.menu>nav a {
+    color:#9E9E9E;
+    font-weight:300;
+    text-decoration:none;
+}
+
+.menu>nav ul a {
+    padding:1px;
+    display:block;
+}
+
+.menu>nav ul a:hover {
+    color:#F2F2F2;
+}
+
+.main {
+    position:absolute;
+    box-sizing:content-box;
+    left:25%;
+    right:0;
+    top:0;
+    background-color:#fff;
+    -o-box-sizing:content-box;
+    -ms-box-sizing:content-box;
+    overflow:auto;
+}
+
+.main>.container {
+    width:100%;
+    max-width:850px;
+    padding:40px 30px 0;
+    margin:0 auto;
+    -o-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+code {
+    background-color:#232323;
+    color:#fff;
+    padding:3px 3px;
+    border-radius:10px;
+}
+
+.dark-box {
+    background:#232323;
+    border-radius:8px
+}
+
+/*! I only included some normalized codes that I thought necessary for this project*/
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+
+html {
+    font-family: sans-serif; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    height:100%
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display:block
+}
+
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+h1 {
+    font-size:2em;
+    margin:.67em 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+figure {
+    margin:1em 40px
+}
