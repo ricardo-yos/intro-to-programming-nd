@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Fresh Tomatoes!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+            background-color: #F5F5F0;
+            margin-bottom: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .movie-tile:hover {
+            background-color: #EEE;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+        .movie-info {
+            background-color: #F5F5F0;
+            margin-bottom: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            height: 382px;
+        }
+        h3 {
+            margin: 0;
+            color: #3399ff;
+        }
+        h5 {
+            margin-top: 5px;
+            color: #3399ff;
+        }
+        .people {
+            padding-left: 0;
+            list-style:none;
+        }
+        .extra-info {
+            background-color: #F5F5F0;
+            padding-left: 15px;
+            border-left: 1px solid #E1E1D0;
+            list-style:none;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        strong {
+            color: #6f6f6f;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Ricardo's Favorite Movies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+<div class="col-md-3 col-lg-3 movie-tile text-center" data-trailer-youtube-id="rb9a00bXf-U" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/6/62/Eternal_sunshine_of_the_spotless_mind_ver3.jpg" width="220" height="342">
+</div>
+<div class="col-md-6 col-lg-6 movie-info text-left">
+    <h3>Eternal Sunshine of the Spotless Mind (2004)</h3>
+    <h5>Drama, Fantasy, Romance</h5>
+    <p>When their relationship turns sour, a couple undergoes a procedure to have each other erased from their memories. But it is only through the process of loss that they discover what they had to begin with. (IMDb website)</p>
+    <ul class="people">
+        <li><strong>Director: </strong>Michel Gondry</li>
+        <li><strong>Writers: </strong>Charlie Kaufman (story), Michel Gondry (story), Pierre Bismuth (story), Charlie Kaufman (screenplay)</li>
+        <li><strong>Stars: </strong>Jim Carrey, Kate Winslet, Tom Wilkinson</li>
+    </ul>
+</div>
+<div class="col-md-3 col-lg-3 movie-info text-left">
+    <ul class="extra-info">
+        <li><strong>Release Date: </strong>March 19, 2004 (USA)</li>
+        <li><strong>Duration: </strong>1h 48min</li>
+        <li><strong>Country: </strong>USA</li>
+        <li><strong>Language: </strong>English</li>
+</div>
+
+<div class="col-md-6 col-lg-6 movie-info text-left">
+    <h3>The Hobbit: An Unexpected Journey (2012)</h3>
+    <h5>Adventure, Fantasy</h5>
+    <p>A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug. (IMDb website)</p>
+    <ul class="people">
+        <li><strong>Director: </strong>Peter Jackson</li>
+        <li><strong>Writers: </strong>Fran Walsh	(screenplay), Philippa Boyens (screenplay), Peter Jackson (screenplay), Guillermo del Toro (screenplay), J.R.R. Tolkien (novel)</li>
+        <li><strong>Stars: </strong>Ian McKellen, Martin Freeman, Richard Armitage</li>
+    </ul>
+</div>
+<div class="col-md-3 col-lg-3 movie-info text-left">
+    <ul class="extra-info">
+        <li><strong>Release Date: </strong>December 12, 2012 (New Zealand)</li>
+        <li><strong>Duration: </strong>2h 49min</li>
+        <li><strong>Country: </strong>USA | New Zealand</li>
+        <li><strong>Language: </strong>English</li>
+</div>
+<div class="col-md-3 col-lg-3 movie-tile text-center" data-trailer-youtube-id="SDnYMbYB-nU" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b3/The_Hobbit-_An_Unexpected_Journey.jpeg/220px-The_Hobbit-_An_Unexpected_Journey.jpeg" width="220" height="342">
+</div>
+
+<div class="col-md-3 col-lg-3 movie-tile text-center" data-trailer-youtube-id="R69laoH02xg" data-toggle="modal" data-target="#trailer">
+    <img src="http://ia.media-imdb.com/images/M/MV5BMTY4NTIwODg0N15BMl5BanBnXkFtZTcwOTc0MjEzMw@@._V1_SY1000_CR0,0,676,1000_AL_.jpg" width="220" height="342">
+</div>
+<div class="col-md-6 col-lg-6 movie-info text-left">
+    <h3>Harry Potter and the Prisoner of Azkaban (2004)</h3>
+    <h5>Adventure, Family, Fantasy</h5>
+    <p>It's Harry's third year at Hogwarts; not only does he have a new 'Defense Against the Dark Arts' teacher, but there is also trouble brewing. Convicted murderer Sirius Black has escaped the Wizards' Prison and is coming after Harry. (IMDb website)</p>
+    <ul class="people">
+        <li><strong>Director: </strong>Alfonso Cuarón</li>
+        <li><strong>Writers: </strong>J.K. Rowling (novel), Steve Kloves (screenplay)</li>
+        <li><strong>Stars: </strong>Daniel Radcliffe, Emma Watson, Rupert Grint</li>
+    </ul>
+</div>
+<div class="col-md-3 col-lg-3 movie-info text-left">
+    <ul class="extra-info">
+        <li><strong>Release Date: </strong>May 31, 2004 (UK)</li>
+        <li><strong>Duration: </strong>2h 22min</li>
+        <li><strong>Country: </strong>UK | USA</li>
+        <li><strong>Language: </strong>English</li>
+</div>
+
+<div class="col-md-6 col-lg-6 movie-info text-left">
+    <h3>Wall-e (2008)</h3>
+    <h5>Animation, Adventure, Family </h5>
+    <p>In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind. (IMDb website)</p>
+    <ul class="people">
+        <li><strong>Director: </strong>Andrew Stanton</li>
+        <li><strong>Writers: </strong>Andrew Stanton (original story by), Pete Docter (original story by), Andrew Stanton (screenplay), Jim Reardon (screenplay)</li>
+        <li><strong>Stars: </strong>Ben Burtt, Elissa Knight, Jeff Garlin</li>
+    </ul>
+</div>
+<div class="col-md-3 col-lg-3 movie-info text-left">
+    <ul class="extra-info">
+        <li><strong>Release Date: </strong>June 27, 2008 (USA)</li>
+        <li><strong>Duration: </strong>1h 38min</li>
+        <li><strong>Country: </strong>USA</li>
+        <li><strong>Language: </strong>English</li>
+</div>
+<div class="col-md-3 col-lg-3 movie-tile text-center" data-trailer-youtube-id="alIq_wG9FNk" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/c/c2/WALL-Eposter.jpg" width="220" height="342">
+</div>
+
+<div class="col-md-3 col-lg-3 movie-tile text-center" data-trailer-youtube-id="nQIhEMnseYk" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/3/3d/The_Lion_King_poster.jpg" width="220" height="342">
+</div>
+<div class="col-md-6 col-lg-6 movie-info text-left">
+    <h3>The Lion King (1994)</h3>
+    <h5>Animation, Adventure, Drama </h5>
+    <p>Lion cub and future king Simba searches for his identity. His eagerness to please others and penchant for testing his boundaries sometimes gets him into trouble. (IMDb website)</p>
+    <ul class="people">
+        <li><strong>Director: </strong>Roger Allers, Rob Minkoff</li>
+        <li><strong>Writers: </strong>Irene Mecchi (screenplay), Jonathan Roberts (screenplay)</li>
+        <li><strong>Stars: </strong>Matthew Broderick, Jeremy Irons, James Earl Jones</li>
+    </ul>
+</div>
+<div class="col-md-3 col-lg-3 movie-info text-left">
+    <ul class="extra-info">
+        <li><strong>Release Date: </strong>June 15, 1994 (USA)</li>
+        <li><strong>Duration: </strong>1h 29min</li>
+        <li><strong>Country: </strong>USA</li>
+        <li><strong>Language: </strong>English</li>
+</div>
+
+<div class="col-md-6 col-lg-6 movie-info text-left">
+    <h3>Iron Man (2008)</h3>
+    <h5>Action, Adventure, Sci-Fi</h5>
+    <p>After being held captive in an Afghan cave, a billionaire engineer creates a unique weaponized suit of armor to fight evil. (IMDb website)</p>
+    <ul class="people">
+        <li><strong>Director: </strong>Jon Favreau</li>
+        <li><strong>Writers: </strong>Mark Fergus (screenplay), Hawk Ostby (screenplay), Art Marcum (screenplay), Matt Holloway (screenplay), Stan Lee (characters), Don Heck (characters), Larry Lieber (characters), Jack Kirby (characters)</li>
+        <li><strong>Stars: </strong>Robert Downey Jr., Gwyneth Paltrow, Terrence Howard</li>
+    </ul>
+</div>
+<div class="col-md-3 col-lg-3 movie-info text-left">
+    <ul class="extra-info">
+        <li><strong>Release Date: </strong>April 30, 2008 (USA)</li>
+        <li><strong>Duration: </strong>2h 6min</li>
+        <li><strong>Country: </strong>USA</li>
+        <li><strong>Language: </strong>English</li>
+</div>
+<div class="col-md-3 col-lg-3 movie-tile text-center" data-trailer-youtube-id="8hYlB38asDY" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/70/Ironmanposter.JPG" width="220" height="342">
+</div>
+
+    </div>
+  </body>
+</html>
