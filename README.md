@@ -1,2 +1,2 @@
 # Intro to Programming Nanodegree
-Udacity Intro to Programming Nanodegree project files
+All my projects of the Udacity Intro to Programming Nanodegree
